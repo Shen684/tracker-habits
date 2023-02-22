@@ -34,7 +34,8 @@ export class AppComponent {
 
     if (this.editing) {
       this.habits.splice(this.editingIndex, 1, habit)
-    } else if (habit.description.length >= 1 && habit.frequency.length >= 1 && habit.name.length >= 1 ) {
+    } else if (habit.description.length >= 1 && habit.frequency.length >= 1 && habit.name.length >= 1 ) { // у FormControl можно передавать валидаторы. 
+// есть валидатор required и не нужно эти проверки делать
       this.habits.push(habit)
     } // редактирование допустимой длинны ввода в инпут для создания привычки
 
